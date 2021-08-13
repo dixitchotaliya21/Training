@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+   
+    <title>Sign Up</title>
+
+    <link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Coda:400,800" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+
+<body>
+    <div id="menu-wrapper">
+        <div id="menu">
+            <ul>
+                <li class="current_page_item"><a href="index.html">Homepage</a></li>
+                <li><a href="signup.html">Signup</a></li>
+                <li><a href="photo.html">Photos</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#">Links</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <!-- end #menu -->
+    </div>
+    <div id="header-wrapper">
+        <div id="header">
+            <div id="logo">
+                <h1><a href="#">Dixit Chotaliya</a></h1>
+                <p>Signup Form</p>
+                <p>
+                    <a href="index.html"></a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="wrapper">
+        <!-- end #header -->
+        <div id="page-bgtop"></div>
+        <div id="page">
+
+            <div id="content">
+
+                <div class="container">
+                    <form action="">
+                        <div class="row">
+                            <div class="field">
+                                <label for="fname">First Name</label>
+                            </div>
+                            <div class="value">
+                                <input type="text" id="fname" name="firstname" placeholder="First name..">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="field">
+                                <label for="lname">Last Name</label>
+                            </div>
+                            <div class="value">
+                                <input type="text" id="lname" name="lastname" placeholder="Last name..">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="field">
+                                <label for="mob">Mobile</label>
+                            </div>
+                            <div class="value">
+                                <input type="number" min="10" max="10" placeholder="Enter Mobile Number" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="field">
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="value">
+                                <input type="email" placeholder="Enter Email" required />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="field">
+                                <label for="img">BirthDate</label>
+                            </div>
+                            <div class="value">
+                                <input class="input" type="date" required />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="field">
+                                <label for="country">Country</label>
+                            </div>
+                            <div class="value">
+                                <select id="country" name="country">
+                                    <option value="australia">India</option>
+                                    <option value="canada">Canada</option>
+                                    <option value="usa">USA</option>
+                                </select>    
+                            </div>
+                        </div>
+
+                       
+                        <div class="row">
+                            <div class="field">
+                                <label for="hobbies">Hobbies</label>
+                            </div>
+                            <div class="value">
+                                <input type="radio" name="choice" value="A" />Choice A<br><input type="radio" name="choice" value="b" />Choice B<br><input type="radio" name="choice" value="C" />Choice C
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="field">
+                                <label for="img">Profile image</label>
+                            </div>
+                            <div class="value">
+                                <input class="input" type="file" name="file123">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="field">
+                                <label for="tech">Technology</label>
+                            </div>
+                            <div class="value">
+                                <select name="list" id="list" multiple>
+                                    <option value="">Option1</option>
+                                    <option value="">Option2</option>
+                                    <option value="">Option3</option>
+                                    <option value="">Option4</option>
+                                    <option value="">Option5</option>
+                                  </select>
+                            </div>
+                        </div><br>
+                        <div class="row">
+                            <div class="field">
+                                <label for=url ">Project URL</label>
+                            </div>
+                            <div class="value">
+                                <input  type="url " placeholder="Project URL " />
+                            </div>
+                        </div><br>
+                        <div class="row">
+                            <div class="field">
+                                <label for="password">Password</label>
+                            </div><br>
+                            <div class="value">
+                                <input type="password" placeholder="Enter password" required />
+                            </div>
+                        </div><br>
+                        
+                        <div class="row ">
+                            <div class="field">
+                                <label for="subject ">Subject</label>
+                            </div>
+                            <div class="value">
+                                <textarea id="subject " name="subject " placeholder="Write something.. " style="height: 50px; "></textarea>
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <input class="button" type="submit " value="Submit ">
+                        </div>
+                    </form>
+                </div>
+                <div style="clear: both; ">&nbsp;</div>
+            </div>
+            <!-- end #content -->
+
+            <!-- end #sidebar -->
+            <div style="clear: both; ">&nbsp;</div>
+        </div>
+        <div id="page-bgbtm "></div>
+        <!-- end #page -->
+    </div>
+    <div id="footer ">
+        <p>2021. Dixit-Chotaliya.com. All rights reserved. Design by <a href="http://www.freecsstemplates.org/">Dixit</a>. Photos by <a href="http://fotogrph.com/">fotogrph</a>.</p>
+    </div>
+    <!-- end #footer -->
+</body>
+
+</html>
