@@ -1,0 +1,27 @@
+<html>
+    <body>
+        <h1>find factorial of number.</h1>
+    </body>
+    <script>
+        /* find factorial of number.*/
+        function factorial(n){
+            if(n == 0 || n == 1){
+                return 1;
+
+            }else{
+                return n * factorial(n-1);
+            }       
+        }
+        function findFactorial(){
+            var n1 = parseInt(prompt("Enter a Number:-"))
+            if(n1 >= 0 || n1 < 0){
+               answer = factorial(n1);
+               document.write("Factorial of that number is "+ answer)
+            }else{
+                alert("Enter a valid number:-")
+                findFactorial();
+            }
+        }
+        findFactorial();
+    </script>
+</html>

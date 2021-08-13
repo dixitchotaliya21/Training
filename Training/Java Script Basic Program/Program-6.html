@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <h1>check whether year is leap year or not</h1>
+    </body>
+    <script>
+        /* Take a year and check whether it is leap year or not*/
+        function checkLeapYear(){
+            var year = parseInt(prompt("Enter a year:-"))
+            if(year >= 0 || year < 0){
+                if( ( year%4 == 0 )&& ( year%100 != 0 ) || ( year%400 == 0 ) ){
+                    document.write("This is leap year")
+                }else{
+                    document.write("This is not a leap year")
+                }
+                
+            }else{
+                alert("Enter a valid year:-")
+                checkLeapYear();
+            }
+        }
+        checkLeapYear();
+    </script>
+</html>
+

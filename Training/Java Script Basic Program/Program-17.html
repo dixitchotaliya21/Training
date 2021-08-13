@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <h1>swap 2 numbers without taking third variable.</h1>
+    </body>
+    <script>
+        /* swap 2 numbers without taking third variable.*/
+        function swapTwoNumbers(){
+            var n1 = parseInt(prompt("Enter a number 1 :-"))
+            var n2 = parseInt(prompt("Enter a number 2 :-"))
+            document.write("Before swapping :-  Value of n1 is " + n1 + " and n2 is " + n2) 
+            if( n1 >= 0 && n2 >= 0){
+                    n1 = n1 + n2;
+                    n2 = n1 - n2;
+                    n1 = n1 - n2;
+                    document.write("<br>After swapping :-  Value of n1 is " + n1 + " and n2 is " + n2)
+            }else{
+                alert("Enter a valid number:-")
+                swapTwoNumbers();
+            }
+        }
+        swapTwoNumbers();
+    </script>
+</html>

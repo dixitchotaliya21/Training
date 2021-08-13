@@ -1,0 +1,20 @@
+<html>
+    <body>
+        <h1>Calculate the area of circle</h1>
+    </body>
+    <script>
+        /* Calculate area of a circle.*/
+        function areaOfCircle(){
+            var radius = prompt("Enter a radius of a circle:-")
+            if(radius >= 0){
+                document.write("Area of circle is "+radius*radius*3.14)
+            }else{
+                alert("Enter a valid radius:-")
+                areaOfCircle();
+            }
+        }
+        areaOfCircle();
+        
+        
+    </script>
+</html>

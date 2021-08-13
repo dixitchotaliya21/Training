@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <h1>Take a number and check whether it is zero, positive or negative</h1>
+    </body>
+    <script>
+        /* Take a number and check whether it is zero, positive or negative*/
+        function checkNumber(){
+            var n1 = parseInt(prompt("Enter a Number:-"))
+            if(n1 >= 0 || n1 < 0){
+                if(n1 == 0){
+                    document.write("This is zero number.")
+                }else if( n1 < 0 ){
+                    document.write("This is negative number.")
+                }else{
+                    document.write("This is a positive number.")
+                }
+                
+            }else{
+                alert("Enter a valid number:-")
+                checkNumber();
+            }
+        }
+        checkNumber();
+    </script>
+</html>
+

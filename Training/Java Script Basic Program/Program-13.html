@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <h1>Take a number to print the square of a number if it is less than 10.</h1>
+    </body>
+    <script>
+        /* Take a number to print the square of a number if it is less than 10.*/
+        function findSquare(){
+            var n1 = parseInt(prompt("Enter a 1 Number:-"))
+            if(n1 >= 0 || n1 < 0){
+                if( n1 < 10){
+                    document.write("The square of this number is " + n1*n1)
+                }else{
+                    document.write("This number is not lessthan 10.")
+                }
+                
+            }else{
+                alert("Enter a valid number:-")
+                findSquare();
+            }
+        }
+        findSquare();
+    </script>
+</html>

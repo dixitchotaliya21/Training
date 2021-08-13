@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <h1>Calculate the area of square</h1>
+    </body>
+    <script>
+        /*Calculate area of a square*/
+        function areaOfSquare(){
+            var length = prompt("Enter a length of square:-")
+            if(length >= 0){
+                document.write("Area of square is "+length*length)
+            }else{
+                alert("Enter a valid length:-")
+                areaOfSquare();
+            }
+        }
+        areaOfSquare();
+    </script>
+</html>

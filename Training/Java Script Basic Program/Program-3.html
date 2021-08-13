@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <h1>Calculate the area of rectangle</h1>
+    </body>
+    <script>
+        /* Calculate area of a Rectangle*/
+        function areaOfRectangle(){
+            var length = parseInt(prompt("Enter a length of Rectangle:-"))
+            var width = parseInt(prompt("Enter a width of Rectangle:-"))
+            if(length >= 0 && width >= 0){
+                document.write("Area of rectangle is "+width*length)
+            }else{
+                alert("Enter a valid length or width:-")
+                areaOfRectangle();
+            }
+        }
+        areaOfRectangle();
+    </script>
+</html>
+
+

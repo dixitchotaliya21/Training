@@ -1,0 +1,20 @@
+<html>
+    <body>
+        <h1>Take a number and calculate sum of natural numbers</h1>
+    </body>
+    <script>
+        /* Take a number and calculate sum of natural numbers*/
+        function sumOfNumbers(){
+            var n1 = parseInt(prompt("Enter a number 1 :-"))
+            if( n1 >= 0){
+                temp = n1*(n1+1)
+                sum = temp/2
+                document.write("Total sum is " + sum)
+            }else{
+                alert("Enter a valid number:-")
+                sumOfNumbers();
+            }
+        }
+        sumOfNumbers();
+    </script>
+</html>

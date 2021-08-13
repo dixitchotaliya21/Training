@@ -1,0 +1,28 @@
+<html>
+    <body>
+        <h1>Take a number check if a number is less than 100 or not. If it is less than 100 then check if it is odd or even.</h1>
+    </body>
+    <script>
+        /*Take a number check if a number is less than 100 or not. If it is less than 100 then check if it is odd or even.*/
+        function checkOddEven(){
+            var n1 = parseInt(prompt("Enter a Number:-"))
+            if(n1 >= 0 || n1 < 0){
+                if( n1 < 100){
+                    document.write("This number is lessthan 100.")
+                    if(n1%2 == 0){
+                        document.write("This is even number.")
+                    }else{
+                        document.write("This is odd number.")
+                    }
+                }else{
+                    document.write("This number is greaterthan 100.")
+                }
+                
+            }else{
+                alert("Enter a valid number:-")
+                checkOddEven();
+            }
+        }
+        checkOddEven();
+    </script>
+</html>

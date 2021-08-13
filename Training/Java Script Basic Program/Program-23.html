@@ -1,0 +1,38 @@
+<html>
+    <body>
+        <button type="button" onclick="calculatePersentage()">Calculate average of 5 Numbers</button>
+        <script>
+            /* Calculate the persentage*/
+            function calculatePersentage(){
+                var n1 = parseInt(prompt("Enter a number 1 :-"))
+                var n2 = parseInt(prompt("Enter a number 2 :-"))
+                var n3 = parseInt(prompt("Enter a number 3 :-"))
+                var n4 = parseInt(prompt("Enter a number 4 :-"))
+                var n5 = parseInt(prompt("Enter a number 5 :-"))
+                
+                if((n1 >= 0 || n1 < 0 ) && ( n2 >= 0 || n2 < 0 ) && ( n3 >= 0 || n3 < 0 ) && ( n4 >= 0 || n4 < 0 ) && ( n5 >= 0 || n5 < 0 )){
+                    sum = n1 + n2 + n3 + n4 + n5;
+                    avg = sum/500;
+                    per = avg*100.00
+                    if(per < 50 ){
+                        document.write("Grade :- F")
+                    }else if(per >=50 && per < 60 ){
+                        document.write("Grade :- D")
+                    }else if(per >=60 && per <70 ){
+                        document.write("Grade :- C")
+                    }else if( per >= 70 && per <80 ){
+                        document.write("Grade :- B")
+                    }else if(per >=80 && per < 90){
+                        document.write("Grade :- A")
+                    }else if(per >= 90){
+                        document.write("Grade :- A+")
+                    }
+                }else{
+                    alert("Enter a valid number:-")
+                    calculatePersentage();
+                }
+            }
+        </script>
+    </body>
+   
+</html>

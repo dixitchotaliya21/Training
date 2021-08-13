@@ -1,0 +1,30 @@
+<html>
+    <body>
+        <button type="button" onclick="findGreatestNumber()">Find Greatest number among 3 numbers</button>
+        <script>
+            /* Find Greatest Number*/
+            function findGreatestNumber(){
+                var n1 = parseInt(prompt("Enter a number 1 :-"))
+                var n2 = parseInt(prompt("Enter a number 2 :-"))
+                var n3 = parseInt(prompt("Enter a number 3 :-"))
+                if((n1 >= 0 || n1 < 0 ) && ( n2 >= 0 || n2 < 0 ) && ( n3 >= 0 || n3 < 0 )){
+                    if(n1 > n2){
+                        if(n1 > n3){
+                            document.write( n1 + " is a greatest number.")
+                        }else{
+                            document.write(n3 + " is greatest number.")
+                        }
+                    }else if(n2 > n3){
+                        document.write(n2 + " is a greatest number.")
+                    }else{
+                        document.write(n3 + " is a greatest number.")
+                    }
+                }else{
+                    alert("Enter a valid number:-")
+                    findGreatestNumber();
+                }
+            }
+        </script>
+    </body>
+   
+</html>

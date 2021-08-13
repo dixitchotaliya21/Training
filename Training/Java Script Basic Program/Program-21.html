@@ -1,0 +1,30 @@
+<html>
+    <body>
+        <h1>Write a program to display Alphabets.</h1>
+    </body>
+    <script>
+        /* Write a program to display Alphabets.*/
+        function printAlphabate(){
+            var n1 = parseInt(prompt("Which type of alphabate do you need <br> 1. Capital  2. Small"))
+            if( n1 == 1){
+                var i = 65;
+	            var j = 91;
+                for(k = i; k < j; k++){
+                    var str =String.fromCharCode(k);
+                    document.write(str)
+                }
+            }else if(n1 == 2 ){
+                var i = 97;
+		        var j = 123; 
+                for(k = i; k < j; k++){
+                    var str =String.fromCharCode(k);
+                    document.write(str)
+                }
+            } else{
+                alert("Enter a valid number:-")
+                printAlphabate();
+            }
+        }
+        printAlphabate();
+    </script>
+</html>
