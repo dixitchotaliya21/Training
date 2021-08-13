@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#grad1 {
+  height: 100px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to bottom right, red, yellow);
+}
+#grad {
+  background-image: linear-gradient(red, yellow, green);
+  height: 100px;
+}
+#grad2 {
+  background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+  height: 100px;
+}
+</style>
+</head>
+<body>
+
+<h1>Linear Gradient - Diagonal</h1>
+<p>This linear gradient starts red at top left, transitioning to yellow (at bottom right):</p>
+
+<div id="grad1"></div>
+<h1>linear-gradient in multicolor stops</h1>
+<div id="grad"></div>
+
+<h1>linear-gradient in Transperency</h1>
+<div id="grad2"></div>
+
+</body>
+</html>
