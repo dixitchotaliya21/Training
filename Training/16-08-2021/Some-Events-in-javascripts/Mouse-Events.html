@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function demo() {
+                alert("Hiii, I am Dixit Chotaliya");
+            }
+            function bigimg(x){
+                x.style.height="80px";
+                x.style.width="80px";
+            }
+            function smallimg(x){
+                x.style.height="30px";
+                x.style.width="30px";
+            }
+            function big(x){
+                x.style.backgroundColor="red";
+                x.style.fontSize="100px";
+                x.innerHTML = "Release Me";
+            }
+            function small(x){
+                x.style.backgroundColor="yellow";
+                x.style.fontSize="50px";
+                x.innerHTML = "click me";
+            }
+            function bigd(x){
+                x.style.backgroundColor="red";
+                x.style.fontSize="100px";
+                x.innerHTML = "Hiii…";
+            }
+
+        </script>
+    </head>
+    <body>
+        <button onclick = "demo()" value="Click Me!!!">Click me</button>
+        <br>
+        <div><img src="IMG_20210815_091635.jpg" height="40px" width="40px" onmouseover="bigimg(this)" onmouseout="smallimg(this)"></div>
+        <div onmousedown="big(this)" onmouseup="small(this)">Hello World!!!</div>
+        <div onmousemove="bigd(this)" >Hello Dixit</div>
+
+    </body>
+</html> 

@@ -1,0 +1,31 @@
+<html>
+    <body>
+        <script type="text/javascript">
+            var s="Hello, I am Dixit Chotaliya";
+            document.write("<h1>" + s + "</h1><br>");
+            var s1 = new String();
+            s1 = "<h1>Hello, World</h1>"
+            document.write("String:- " + s+"<br>");
+            document.write("Upper Case:- " + s.toUpperCase()+"<br>");
+            document.write("Lower case:- " + s1.toLowerCase()+"<br>");
+            document.write("Substr:- " + s.substr(3,6)+"<br>");
+            document.write("CharAt-Uppercase:- " + s.charAt(1).toUpperCase()+"<br>");
+            document.write("Length:- " + s1.length+"<br>");
+            document.write("IndexOf:- " + s.indexOf('d')+"<br>");
+            document.write("Last Index Of:- " + s.lastIndexOf('a')+"<br>");
+            document.write("Concatination:- " + s.concat(s1)+"<br>");
+            document.write("Search:- " + s.search("Hello")+"<br>");
+            document.write("Slice :- " + s.slice(3,7) + "<br>")
+            document.write("SubString:- " + s.substring(3,6)+"<br>");
+            string = "Hi Dixit, i am Dixit.                               "
+            i_string = string.replace(/dixit/i, "Rutvik");
+            g_string = string.replace(/Dixit/g, "Rutvik");
+            document.write("String with /---/i :- " + i_string +"<br>");
+            document.write("String with /---/g :- " + g_string+"<br>");
+            document.write("Trim:- " + string.trim() +"<br>");
+            document.write("Char Code at:- " + s.charCodeAt(3)+"<br>");
+            document.write("Match with rg:- " + s.match(/Hello/ig)+"<br>");
+            document.write("Includes:- " + s.includes("Hello")+"<br>");
+        </script>
+    </body>
+</html>

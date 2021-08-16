@@ -1,0 +1,31 @@
+<html>
+    <body>
+        <script type="text/javascript">
+            var d=new Date();
+            var dd,mm,yy,day,timezone,time,hours,seconds,utcDate,utcTime,utcVarDate,
+            dd=d.getDate();
+            mm=d.getMonth();
+            yy=d.getFullYear();
+            day=d.getDay();
+            timezone=d.getTimezoneOffset();
+            time=d.getTime();
+            hours=d.getHours();
+            seconds=d.getSeconds();
+            utcDate=d.getUTCDate();
+            utcTime=d.getUTCHours();
+            document.write(dd+"-"+mm+"-"+yy+"<br>");
+            document.write(d);
+            document.write("date " + dd + "<br>")
+            document.write("Months "  + mm + "<br>")
+            document.write("Year " + yy + "<br>")
+            document.write("Day " + day + "<br>")
+            document.write("Time Zone Offset " + timezone + "<br>")
+            document.write("Time " + time + "<br>")
+            document.write("Hours " + hours + "<br>")
+            document.write("Second " + seconds + "<br>")
+            document.write("Utc Date " + utcDate + "<br>")
+            document.write("Utc Time Hours " + utcTime + "<br>")
+            document.write("Utc Var Date " + utcVarDate + "<br>")
+        </script>
+    </body>
+</html>
