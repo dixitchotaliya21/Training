@@ -1,0 +1,27 @@
+<html>
+    <body>
+        <div id="id1">
+            <p id="p1"> Hii.. I am dixit chotaliya</p>
+        </div>
+        <div id="id2">
+            <p id="h1">Welcom to my website.</p>
+        </div>
+    </body>
+    <script>
+         document.getElementById("id1").addEventListener("click", function(){
+             alert('this is div 1');
+         },false);
+         document.getElementById("p1").addEventListener("click", function(){
+             event.stopPropagation();
+             alert("this is p 1");
+         },false);
+         document.getElementById("id2").addEventListener("click", function(){
+            event.stopPropagation(); 
+            alert("this is  div 2");
+         },true);
+         document.getElementById("h1").addEventListener("click", function(){
+             alert("this is h1 tag 1");
+         },true);
+        
+    </script>
+</html>

@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <div id="div1"></div>
+        <div>
+            <button id="start" onclick="str()" >Start Countdown</button>
+            <button id="stop" onclick="clearInterval(interval_id);" >Stop Countdown</button>
+        </div>
+    </body>
+    <script>
+        var  i = 20;
+        var interval_id;
+        function str(){
+            interval_id = setInterval(start_fun,1000);
+            function start_fun(){
+                    var div1 = document.getElementById("div1");
+                    var sp = document.createElement("span");
+                    sp.textContent = i-- + ",";
+                    div1.appendChild(sp);
+                    if(i == 0){
+                        clearInterval(interval_id);
+                    }
+            }
+        }
+    </script>
+</html>

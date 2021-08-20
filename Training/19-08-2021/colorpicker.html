@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <div id="content">
+            <p>Hello, I am dixit chotaliya.
+                 Currently i am working in webcodegenie as intern.
+                 I am here for change the style of this paragrph and also the content of the paragraph 
+                 acording to mouse movements.
+            </p>
+            <h1>Hello.</h1>
+           
+        </div>
+        <input type="color" id="txt1" >
+    </body>
+    <script>
+        document.getElementById("txt1").addEventListener("input", change_color);
+        function change_color(){
+             var color = document.getElementById("txt1").value;
+             document.getElementById("content").style.color = color;
+        }
+    </script>
+</html>

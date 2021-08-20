@@ -1,0 +1,36 @@
+<html>
+    <script>
+       var item_list = new Array();
+        function addTodo(){
+            document.getElementById('txt2').innerHTML = "";
+            var item = document.getElementById("txt").value;
+            if(item == ""){
+                document.getElementById('txt2').innerHTML = "Please enter a value";
+            }else{
+                item_list.push(item);
+                document.getElementById('txt2').innerHTML = "Your task is added."
+            }
+            document.getElementById('txt').value = "";
+            display_item();
+        }
+        function display_item(){
+                for(var i = 0;i<item_list.length; i++){
+                    var box = document.getElementById("box");
+                    var li = document.createElement("li");
+                    li.textContent = item_list[i];
+                    box.appendChild(li);
+                }
+                item_list.length = 0;
+        }
+    </script>
+    <body>
+        <input type="todoinput" id="txt" >
+        <button id="click" onclick="addTodo()">Add items</button>
+        <span id="txt2"></span>
+       <ul id="box">
+
+       </ul>
+    </body>
+</html>
+
+

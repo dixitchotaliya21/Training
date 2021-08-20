@@ -1,0 +1,53 @@
+<html>
+    <body>
+        <div id="content">
+            <p>Hello, I am dixit chotaliya.
+                 Currently i am working in webcodegenie as intern.
+                 I am here for change the style of this paragrph and also the content of the paragraph 
+                 acording to mouse movements.
+            </p>
+            <h1>Hello.</h1>
+        </div>
+        <div id="content2" >
+            <p >This is a paragraph in Div.</p>
+            <marquee id="mq" onmouseover="this.stop();" onmouseout="this.start();">Welcom to my website</marquee>
+        </div>
+    </body>
+    <script>
+        document.getElementById("content").addEventListener("click" , change_style);
+        document.getElementById("content").addEventListener("dblclick" , change_style2);
+        document.getElementById("content2").addEventListener("mouseover" , change_style3);
+        document.getElementById("content2").addEventListener("mouseout" , change_style4);
+        function change_style(){
+            var element = document.getElementById("content");
+            element.style.backgroundColor = "blue";
+            element.style.borderRadius = "10px";
+            element.style.color = "white";
+            element.style.fontWeight = "bold";
+            element.style.fontStyle = "italic";
+        }
+        function change_style2(){
+            var element = document.getElementById("content");
+            element.style.backgroundColor = "white";
+            element.style.color = "black";
+            element.style.fontStyle = "normal";
+        }
+        function change_style3(){
+            var element = document.getElementById("content2");
+            var marq = document.getElementById("mq");
+            element.style.backgroundColor = "white";
+            element.style.color = "red";
+            element.style.fontWeight = "bold";
+            marq.scrollamount = "0";
+          
+        }
+        function change_style4(){
+            var element = document.getElementById("content2");
+            var marq = document.getElementById("mq");
+            element.style.backgroundColor = "white";
+            element.style.color = "black";
+            marq.scrollamount = "5";
+            element.style.fontWeight = "normal";
+        }
+    </script>
+</html>

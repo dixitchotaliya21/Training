@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <img  id="img1" src="1657858.jpg" alt="Image" width="500" height="500">
+    </body>
+    <script>
+        document.getElementById("img1").addEventListener("mouseover" , image2);
+        document.getElementById("img1").addEventListener("mouseout", image3);
+        document.getElementById("img1").addEventListener("mousedown", image4);
+        document.getElementById("img1").addEventListener("mouseup", image5);
+        function image2(){
+            document.getElementById("img1").src = "IMG_20190812_190402.jpg";
+        }
+        function image3(){
+            document.getElementById("img1").src = "1657858.jpg";
+        }
+        function image4(){
+            document.getElementById("img1").src = "i.jpg";
+        }
+        function image5(){
+            document.getElementById("img1").src = "1657858.jpg";
+        }
+
+
+    </script>
+</html>
