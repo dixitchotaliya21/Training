@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>Responsive jQuery Slider - bxSlider</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.css">
+
+<style>
+    body{
+  background-color:#d9dceb;
+  width: 100%; 
+}
+.bx-wrapper
+{
+    max-width: 1024px!important;
+    width: 600px!important;
+    height: 400px!important;
+} 
+h1{
+  text-align: center;
+}
+#l1{
+  height: 400px;
+}
+img{
+  height: 395px;
+}
+
+</style>
+  </head>
+
+<body>
+  <h1>jQuery Box Slider</h1>
+  <ul class="bxslider">
+  <li id="l1"><img src="images.jpg" /></li>
+  <li id="l1"><img src="download2.jpg" /></li>
+  <li id="l1"><img src="images2.jpg" /></li>
+</ul>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.min.js"></script>
+<script>
+    $(document).ready(function(){
+      $('.bxslider').bxSlider();
+});
+</script>
+</body>
+</html>

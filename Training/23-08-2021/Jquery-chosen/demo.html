@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Experiment</title>
+
+  <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.css">
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="chosen.jquery.js"></script>
+
+  <script type="text/javascript">
+    $(function() {
+      $("#chosen-select").chosen();
+      $("#multiple-chosen-select").chosen();
+    });
+  </script>
+
+</head>
+
+<body>
+    <form >
+        <select >
+            <option>Ahemdabad</option>
+            <option>Rajkot</option>
+            <option>Surat</option>
+            <option>Jamnagar</option>
+            <option>Mumbai</option>
+        </select>
+        <div style="height: 100px; width: 100%;"></div>
+        <hr>
+        <select  id="chosen-select">
+            <option>Ahemdabad</option>
+            <option>Rajkot</option>
+            <option>Surat</option>
+            <option>Jamnagar</option>
+            <option>Mumbai</option>
+        </select>
+        <div style="height: 100px; width: 100%;"></div>
+        <hr>
+        <select multiple>
+            <option>Ahemdabad</option>
+            <option>Rajkot</option>
+            <option>Surat</option>
+            <option>Jamnagar</option>
+            <option>Mumbai</option>
+        </select>
+        <div style="height: 100px; width: 100%;"></div>
+        <hr>
+        <select id="multiple-chosen-select" multiple >
+            <option>Ahemdabad</option>
+            <option>Rajkot</option>
+            <option>Surat</option>
+            <option>Jamnagar</option>
+            <option>Mumbai</option>
+        </select>
+    </form>
+</body>
+
+</html>
