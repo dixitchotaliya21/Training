@@ -1,0 +1,26 @@
+<html>
+<head>
+  <title>jQuery [attribute^=value] Selector</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("p[class^='par']").css('color', 'red');
+      $("p[class!='param']").css('color', 'green');
+      $("p[class $='ram']").css("color","yellow")
+      $("p[class|='param']").css('color', 'lightblue');
+    });
+  </script>
+</head>
+<body>
+  <h1>Article heading</h1>
+  <p>first paragraph</p>
+  <p class="paragraph">second paragraph</p>
+  <p class="braam">third paragraph</p>
+  <p class="param">fourth paragraph</p>
+  <p class="param-last">fourth paragraph</p>
+  <h1>end</h1>
+  <p class="waram">second paragraph</p>
+  <p class="param">third paragraph</p>
+  <p class="braam">fourth paragraph</p>
+</body>
+</html>

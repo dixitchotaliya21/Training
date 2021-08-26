@@ -1,0 +1,27 @@
+<html>
+<head>
+  <title>jQuery Tag name Selector</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+        $("*").css("color","lightblue");
+        $("p").css('color', 'red');
+        $("h1,h3").css("color","blue");
+        $("span").css("color","lightblue");
+        $("#heading").css("background-color","green")
+        $(".param , .S").css("backgroundColor","black")
+      
+    });
+  </script>
+</head>
+<body>
+  <h1>Article heading</h1>
+  <h1 id="heading">Article heading with id</h1>
+  <p>First paragraph start here...</p>
+  <p>Second paragraph start here...</p>
+  <h3>Footer heading</h3>
+  <span>I am Dixit.</span>
+  <p class="param">First paragraph start here...</p>
+  <p class="S">Second paragraph start here...</p>
+</body>
+</html>

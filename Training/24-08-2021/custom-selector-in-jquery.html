@@ -1,0 +1,62 @@
+<html>
+<head>
+    <style>
+        .param {
+          display: none;
+          color: red;
+        }
+      </style>
+  <title>jQuery :contains(text) Selector</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("p:contains('paragraph')").css('color', 'red');
+      $(":empty").css('background-color', 'red');
+      $("p:has('span')").css('color', 'blue');
+      $(":header").css("background-color","red")
+      $(":hidden").slideDown(6000)
+      $(":root").css("background-color","lightblue")
+      $("input:not(:checked) + label").css('color', 'yellow');
+    });
+  </script>
+  
+</head>
+<body>
+  <h1>Article heading</h1>
+  <p>first span paragraph contents</p>
+
+  <section style="border:1px solid #000;">
+    <p><span> first span paragraph contents</span></p>
+    <p class="param">second paragraph contents</p>
+    <p>third contents</p>
+  </section>
+  <br />
+ <span style="width: 400; height: 300;"></span>
+ <div>
+    <table border="1" width="300px;">
+        <tr>
+          <td>A</td>
+          <td>B</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Z</td>
+          <td></td>
+          <td>Y</td>
+        </tr>
+      </table>
+ </div>
+
+  <div style="border:1px solid #000;">
+    <p>first contents</p>
+    <p>second paragraph contents</p>
+    <p>third contents</p>
+    <h3>Footer Ending</h3>
+  </div>
+  <div style="border:1px solid #000;">
+    <input type="checkbox" name="ra"> <label>Radio</label> <br />
+    <input type="checkbox" name="tv" checked="checked"> <label>TV</label> <br />
+    <input type="checkbox" name="cp"> <label>Cell Phone</label> <br />
+  </div>
+</body>
+</html>
