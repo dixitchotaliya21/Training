@@ -1,0 +1,41 @@
+<html>
+<head>
+  <title>jQuery parent child Selector</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("div p").css('color', 'red');
+      $("div > p").css("background-color","yellow");
+      $("div + p").css("background-color","green");
+      $("div ~ p").css("background-color","black");
+    });
+  </script>
+</head>
+<body>
+  <h1>Article heading</h1>
+  <p>body paragraph contents</p>
+  <p>first paragraph contents</p>
+  <p>second paragraph contents</p>
+  <br />
+
+  <div style="border:1px solid #000;">
+    <h1>Article heading</h1>
+    <p>first paragraph contents</p>
+    <p>second paragraph contents</p>
+  </div>
+  <p>This element is immediately preceded by a sibling of div element</p>
+  <br />
+  <p>This element is immediately preceded by after br element</p>
+  <hr>
+  <div style="border:1px solid #000;">
+    <p>first paragraph contents</p>
+    <p>second paragraph contents</p>
+  </div>
+  <br />
+
+  <section style="border:1px solid #000;">
+    <h3>Footer Ending</h3>
+    <p>first paragraph contents</p>
+  </section>
+</body>
+</html>

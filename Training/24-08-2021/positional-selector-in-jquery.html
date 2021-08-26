@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery :first Selector</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("p:first").css('color', 'red');
+      $("p:last").css('color', 'blue');
+      $("p:eq(1)").css({"fontWeight": "bold", "backgroundColor": "red"});
+      $("td:even").css('color', 'blue');
+      $("tr:odd").css('color', 'blue');
+      $("p:first-child").css("font-size","5px")
+      $("p:first-of-type").css("font-style","italic")
+      $("p:nth-child(2)").css('color', 'red');
+      $("p:nth-of-type(2)").css('background-color', 'green');
+    });
+  </script>
+</head>
+<body>
+    <p>Body paragraph start here...</p>
+  <h1>Positional Selector</h1>
+  <span><p>First child of span</p></span>
+  <p>First paragraph start here...</p>
+  <p>Second paragraph start here...</p>
+  <h3>Footer heading</h3>
+  <table border="1" style="width: 300px;">
+    <tr>
+      <td>Cell 1</td>
+      <td>Cell 2</td>
+    </tr>
+    <tr>
+      <td>Cell 3</td>
+      <td>Cell 4</td>
+    </tr>
+    <tr>
+      <td>Cell 5</td>
+      <td>Cell 6</td>
+    </tr>
+    <tr>
+      <td>Cell 7</td>
+      <td>Cell 8</td>
+    </tr>
+  </table>
+  <p>second paragraph contents.</p>
+  <p>third paragraph contents.</p>
+
+  <section style="border:1px solid #000;">
+    <p>section first paragraph contents...</p>
+    <p>section second paragraph contents..</p>
+    <p>section third paragraph contents...</p>
+  </section>
+  <br />
+
+  <div style="border:1px solid #000;">
+    <h3>Footer Ending</h3>
+    <p>Footer first paragraph contents...</p>
+    <p>Footer second paragraph contents..</p>
+  </div>
+</body>
+</html>
