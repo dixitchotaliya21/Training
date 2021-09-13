@@ -1,0 +1,26 @@
+
+<!-- saved from url=(0072)file:///F:/Dixit/Training/Java%20Script%20Basic%20Program/Program-5.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"></head><body>
+        <h1>Check Number is odd or even</h1>
+    
+    <script>
+        /* 2. Check Number is odd or even*/
+        function checkOddEven(){
+            var n1 = parseInt(prompt("Enter a Number:-"))
+            if(n1 >= 0 || n1 < 0){
+                if(n1%2 == 0){
+                    document.write("This is even number.")
+                }else{
+                    document.write("This is odd number.")
+                }
+                
+            }else{
+                alert("Enter a valid length or width:-")
+                checkOddEven();
+            }
+        }
+        checkOddEven();
+    </script>This is odd number.
+
+
+</body></html>

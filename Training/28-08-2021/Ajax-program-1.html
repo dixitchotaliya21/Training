@@ -1,0 +1,24 @@
+<html>
+
+<head>
+        <script type="text/javascript">
+                function clickResponse() {
+                        alert("You clicked button");
+                        var req = new XMLHttpRequest();
+                        req.onreadystatechange = function () {
+                                if (req.readyState == 4 && req.status == 200) {
+                                        document.getElementById("div1").innerHTML = req.responseText;
+                                }
+                        };
+                        req.open("GET", "myintro.txt", true);
+                        req.send();
+                } 
+        </script>
+</head>
+
+<body>
+        <div id="div1">my first ajax program</div>
+        <input type="button" id="button1" value="click me!" onclick="clickResponse()" />
+</body>
+
+</html>

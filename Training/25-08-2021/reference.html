@@ -1,0 +1,373 @@
+<html>
+    <head>
+        
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.11.0/css/jquery.dataTables.min.css"> 
+        <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.0.0/css/buttons.dataTables.min.css">
+          <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+         <script src="   https://cdn.datatables.net/1.11.0/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/buttons/2.0.0/js/dataTables.buttons.min.js"></script>
+        <script src= "https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+        <script src= "https://cdn.datatables.net/buttons/2.0.0/js/buttons.html5.min.js"></script>
+       <script src= "https://cdn.datatables.net/buttons/2.0.0/js/buttons.print.min.js"></script>
+         <link rel="stylesheet" href="table.css">
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/29.1.0/classic/ckeditor.js"></script>
+	<style>
+        .ck-editor__editable_inline {
+                min-height: 400px;
+            }
+    </style>
+    <script>
+     $(document).ready(function() {
+    $('#example').DataTable( {
+        dom: 'Bfrtip',
+        buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+        ]
+    } );
+} );
+   
+
+   
+   </script>
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.11.0/css/jquery.dataTables.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.0.0/css/buttons.dataTables.min.css">
+        <script>
+            $(document).ready(function() {
+                var printCounter = 0;
+ 
+    // Append a caption to the table before the DataTables initialisation
+    $('#example').append('<caption style="caption-side: bottom">A fictional company\'s staff table.</caption>');
+ 
+    $('#example').DataTable( {
+        dom: 'Bfrtip',
+        buttons: [
+            'copy',
+            {
+                extend: 'excel',
+                messageTop: 'The information in this table is copyright to Sirius Cybernetics Corp.'
+            },
+            {
+                extend: 'pdf',
+                messageBottom: null
+            },
+            {
+                extend: 'print',
+                messageTop: function () {
+                    printCounter++;
+ 
+                    if ( printCounter === 1 ) {
+                        return 'This is the first time you have printed this document.';
+                    }
+                    else {
+                        return 'You have printed this document '+printCounter+' times';
+                    }
+                },
+                messageBottom: null
+            }
+        ]
+    } );
+} );
+        </script>
+        
+        <style>
+            .error
+            {
+             color: red;
+             font-weight: bold;
+             text-align: left;
+            }
+        </style>
+        <link rel="stylesheet" href="lightbox.css"/>
+    <script src="lightbox-plus-jquery.js"></script>
+        <script type="text/javascript" src="ckeditor/plugins/lite/lite-interface.js"></script>
+        <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.css">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="chosen.jquery.js"></script>
+        <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+        <script>
+            function countChar(val) {
+              var len = val.value.length;
+              if (len >= 500) {
+                alert()
+              } else {
+                  var ch = 500 - len;
+                $('#charNum').text("Total Charactor:-" + len );
+                $('#re').text("Remaining Charactor:-" + ch );
+
+              }
+        };
+          </script>
+        <script>
+            $(function() {
+              $("#multiple_chosen_select").chosen();
+              $("#hoby").chosen();
+            });
+            $(document).ready(function()
+            {
+                $.validator.setDefaults({ ignore: ":hidden:not(select)" });
+                $("#frm").validate({
+                rules: {
+                    firstname: "required",
+                    lastname: "required",
+                    password: {
+                        required: true,
+                        minlength: 7
+                    },
+                    mobile:
+                    {
+                        required:true,
+                        minlength:10
+                    },
+                    date: {
+                    required: true,
+                    date: true
+                    },
+
+                    age:
+                    {
+                    required:true,
+                    min:21
+                    },
+                    confirm_password: {
+                        required: true,
+                        minlength: 7,
+                        equalTo: "#password"
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    agree: "required",
+                    hoby : "required",
+                    multiple_chosen_select: "required",
+                    address:"required"
+			    },
+			messages: {
+				firstname: "Please enter your firstname",
+				lastname: "Please enter your lastname",
+				mobile: "Please enter the Mobile No.",
+				password: {
+					required: "Please enter a password",
+					minlength: "Your Password must contain atleast 7 character."
+				},
+                date:{
+                    required: "Date is required",
+                    date:"enter a date "
+                },
+				confirm_password: {
+					required: "Please enter a password",
+					minlength: "Your Password must contain atleast 7 character.",
+					equalTo: "Please enter the same password"
+				},
+				email: "Please enter a valid email address",
+                hoby: "Please select any hobby",
+                multiple_chosen_select: "Please select a city",
+                address:"Please enter an address"
+                
+			}
+        });
+    })
+            
+    </script>
+    </head>
+    <body>
+        <form id="frm">
+            
+
+            <p>
+                <label for="firstname">Firstname</label>
+                <input id="firstname" name="firstname" type="text">
+                </p>
+                <p>
+                <label for="lastname">Lastname</label>
+                <input id="lastname" name="lastname" type="text">
+                </p>
+                <p>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email">
+                </p>
+                <p>
+                <label for="mobile">Mobile No</label>
+                <input id="mobile" name="mobile" type="number">
+                </p>
+                <p>
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password">
+                </p>
+                <p>
+                <label for="confirm_password">Confirm password</label>
+                <input id="confirm_password" name="confirm_password" type="password">
+                </p>
+                <p>
+                    <label for="date">Date of Birth</label>
+                    <input id="date" name="date" type="date">
+                    </p>
+                        <label for="file2">Select any image file</label>
+                        <input type="file" id="file2" name="file2" class="required" accept="image/*">
+                        </p>
+                        <label><b>City:</b></label>
+                        <select for="city" id="multiple_chosen_select" name="multiple_chosen_select" multiple>
+                            <option>Ahemdabad</option>
+                            <option>Rajkot</option>
+                            <option>Surat</option>
+                            <option>Jamnagar</option>
+                            <option>Mumbai</option>
+                        </select><br>
+                        <label><b>Address:</b></label>
+                        <textarea rows="2" cols="55" id="field" onkeyup="countChar(this)" type="address" name="address" id="adrress" required></textarea><br>
+                        <div id="charNum"></div>
+                        <span id= "re"></span><br>
+                        <label><b>Hobbies:</b></label>
+                        <select for="hoby" id="hoby" name="hoby" multiple>
+                            <option>Watching Movies</option>
+                            <option>Playing Games</option>
+                            <option>Swimming</option>
+                            <option>Traveling</option>
+                            <option>Reading Books</option>
+                        </select><br>
+                        <label><b>About you:</b></label>
+                        <textarea cols="80" id="t1" name="editor1" rows="10" style="height: 400;" data-sample-short></textarea>
+                            <script>
+                                CKEDITOR.replace('t1', {
+                                height: 100,
+                                width:550,
+                                baseFloatZIndex: 10005
+                                });
+                            </script>
+                        <label><b>Images :</b></label>
+                        <a href="images2.jpg" data-lightbox="image-1" data-title="Image About Nature"><img src="images2.jpg" height="150px" width="200px"></a>
+                        <a href="images1.jpg" data-lightbox="image-1" data-title="Image About Nature"><img src="images1.jpg" height="150px" width="200px"></a>
+                        <a href="images.jpg" data-lightbox="image-1" data-title="Image About Nature"><img src="images.jpg" height="150px" width="200px"></a>
+                        
+                        <script src = "lightbox.js"></script>
+                        <script>
+                            lightbox.option({
+                              'resizeDuration': 200,
+                              'wrapAround': true
+                            })
+                        </script>
+                        <h1>Ck editor</h1>
+                        <div id="editor" width="50px">
+                            <p>This is WYS IS WYG.</p>
+                        </div>
+                        
+                        <script>
+                            ClassicEditor
+                                .create( document.querySelector('#editor'));
+                            
+                                
+                        </script>
+                <input type="submit" value="Submit">
+        </form>
+        <table id="example" class="display" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Office</th>
+                    <th>Age</th>
+                    <th>Start date</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Tiger Nixon</td>
+                    <td>System Architect</td>
+                    <td>Edinburgh</td>
+                    <td>61</td>
+                    <td>2011/04/25</td>
+                    <td>$320,800</td>
+                </tr>
+                <tr>
+                    <td>Garrett Winters</td>
+                    <td>Accountant</td>
+                    <td>Tokyo</td>
+                    <td>63</td>
+                    <td>2011/07/25</td>
+                    <td>$170,750</td>
+                </tr>
+                <tr>
+                    <td>Ashton Cox</td>
+                    <td>Junior Technical Author</td>
+                    <td>San Francisco</td>
+                    <td>66</td>
+                    <td>2009/01/12</td>
+                    <td>$86,000</td>
+                </tr>
+                <tr>
+                    <td>Cedric Kelly</td>
+                    <td>Senior Javascript Developer</td>
+                    <td>Edinburgh</td>
+                    <td>22</td>
+                    <td>2012/03/29</td>
+                    <td>$433,060</td>
+                </tr>
+                <tr>
+                    <td>Airi Satou</td>
+                    <td>Accountant</td>
+                    <td>Tokyo</td>
+                    <td>33</td>
+                    <td>2008/11/28</td>
+                    <td>$162,700</td>
+                </tr>
+                <tr>
+                    <td>Brielle Williamson</td>
+                    <td>Integration Specialist</td>
+                    <td>New York</td>
+                    <td>61</td>
+                    <td>2012/12/02</td>
+                    <td>$372,000</td>
+                </tr>
+                <tr>
+                    <td>Herrod Chandler</td>
+                    <td>Sales Assistant</td>
+                    <td>San Francisco</td>
+                    <td>59</td>
+                    <td>2012/08/06</td>
+                    <td>$137,500</td>
+                </tr>
+                <tr>
+                    <td>Rhona Davidson</td>
+                    <td>Integration Specialist</td>
+                    <td>Tokyo</td>
+                    <td>55</td>
+                    <td>2010/10/14</td>
+                    <td>$327,900</td>
+                </tr>
+                <tr>
+                    <td>Colleen Hurst</td>
+                    <td>Javascript Developer</td>
+                    <td>San Francisco</td>
+                    <td>39</td>
+                    <td>2009/09/15</td>
+                    <td>$205,500</td>
+                </tr>
+                <tr>
+                    <td>Sonya Frost</td>
+                    <td>Software Engineer</td>
+                    <td>Edinburgh</td>
+                    <td>23</td>
+                    <td>2008/12/13</td>
+                    <td>$103,600</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Office</th>
+                    <th>Age</th>
+                    <th>Start date</th>
+                    <th>Salary</th>
+                </tr>
+            </tfoot>
+        </table>
+        <!-- Ckeditor function  -->
+
+    </body>
+</html>

@@ -1,30 +1,258 @@
 <!DOCTYPE html>    
 <html>    
     <head>    
-        <title>Login Form</title>    
+        <title>Persional Information Form</title>    
+        <script type="text/javascript">
+            function myFocusFunction(){
+                var ele = document.getElementById("Uname");
+                ele.style.backgroundColor = "lightBlue";        
+            }
+            function myBlurFunction(){
+                var ele = document.getElementById("Uname");
+                ele.style.backgroundColor = "white";  
+               
+            }
+            function phoneValidation(){
+                let ele = document.getElementById("phno").value;
+                if(ele.length != 10){
+                    document.getElementById("ph").innerHTML = "Please enter 10 digit number";
+                }
+            }
+            function emailValidation(){
+                let ele = document.getElementById("email").value;
+                var email_format = "/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/";
+                if(ele.match(email_format)){
+                    document.getElementById("em").style.color = "green";
+                    document.getElementById("em").innerHTML = "You enter a valid email";
+                }else{
+                    document.getElementById("em").style.color = "red";
+                    document.getElementById("em").innerHTML = "Please enter a valid email address";
+                }
+            }
+            function checkLeapYear(year){
+                if(year >= 0 || year < 0){
+                    if( ( year%4 == 0 )&& ( year%100 != 0 ) || ( year%400 == 0 ) ){
+                            return true;
+                    }else{
+                        return false
+                    }
+                }
+            }
+            function dobValidation(){
+                let dob = document.getElementById("dob");
+                let str_arr = dob.value.split("-");
+
+                if(str_arr[0] < "1998"){
+                    document.getElementById("db").innerHTML = "Please enter a valid date of birth";
+                }else if(str_arr[1] == "2"){
+                    var flag = checkLeapYear(str_arr[0]);
+                    if(flag == 1){
+                        if(str_arr[2] > "31"){
+                            document.getElementById("db").innerHTML = "Please enter a valid date of birth";
+                        }
+                    }else{
+                        if(str_arr[2] > "30"){
+                            document.getElementById("db").innerHTML = "Please enter a valid date of birth";
+                        }
+                    }
+                }else if(str[1] % 2 == 0){
+                    if(str_arr[2] > "30"){
+                        document.getElementById("db").innerHTML = "Please enter a valid date of birth";
+                    }
+                }else{
+                    if(str_arr[2] > "31"){
+                            document.getElementById("db").innerHTML = "Please enter a valid date of birth";
+                    }
+                }
+            }
+            function passwordValidation(){
+                let str = document.getElementById("pass");
+                let format = new RegExp(/^[a-zA-Z0-9!@#\$%\^\&*\)\(+=._-]{6,}$/);
+                let alpha = new RegExp(a-zA-Z0-9);
+                if(format.test(str)){
+                        document.getElementById("ps").innerHTML = "password is strong."
+                        document.getElementById("ps").style.color = "green";
+                        if(str.length >= "8"){
+                            document.getElementById("ps").innerHTML = "password is very strong."
+                        }
+                        passwordValidation();
+                }else if(str.length<8 | alpha.test(str) ){
+                    document.getElementById("ps").innerHTML = "password is week. You should contain the special charcter in this field."
+                    document.getElementById("ps").style.color = "red";
+                    passwordValidation();
+                }else{
+                    document.getElementById("ps").innerHTML = "Password is week"
+                    passwordValidation();
+                }
+            }
+            function printHobbies(){
+                var checkedElement = [];
+                var watching_movie = document.getElementById("h1");
+                if(watching_movie.checked){
+                    checkedElement.push(watching_movie.value);
+                }
+                var playing_games = document.getElementById("h2");
+                if(playing_games.checked){
+                    checkedElement.push(playing_games.value);
+                }
+                var listening_music = document.getElementById("h3");
+                if(listening_music.checked){
+                    listening_music.push(listening_music.value);
+                }
+                var other = document.getElementById("h4");
+                if(other.checked){
+                    checkedElement.push(other.value);
+                }
+                if(checkedElement.length > 0){
+                    document.getElementById("hb").innerHTML = `You select this value ${checkedElement} `
+                }else{
+                    document.getElementById("hb").innerHTML = "You checked Nothing"
+                }
+            }
+            function printLanguages(){
+                var checkedElement = [];
+                var gujarati = document.getElementById("l1");
+                if(gujarati.checked){
+                    checkedElement.push(gujarati.value);
+                }
+                var hindi = document.getElementById("l2");
+                if(hindi.checked){
+                    checkedElement.push(hindi.value);
+                }
+                var english = document.getElementById("l3");
+                if(english.checked){
+                    listening_music.push(english.value);
+                }
+                var other = document.getElementById("l4");
+                if(other.checked){
+                    checkedElement.push(other.value);
+                }
+                if(checkedElement.length > 0){
+                    document.getElementById("ln").innerHTML = `You select this value ${checkedElement} `
+                }
+                else{
+                    document.getElementById("pl").innerHTML = `You select Nothing.`
+                }
+            }
+            function printProgrammingLanguages(){
+                var checkedElement = [];
+                var python = document.getElementById("pl1");
+                if(python.checked){
+                    checkedElement.push(python.value);
+                }
+                var javascript = document.getElementById("pl2");
+                if(javascript.checked){
+                    checkedElement.push(javascript.value);
+                }
+                var html = document.getElementById("pl3");
+                if(html.checked){
+                    listening_music.push(html.value);
+                }
+                var java = document.getElementById("pl4");
+                if(java.checked){
+                    checkedElement.push(java.value);
+                }
+                var other = document.getElementById("pl5");
+                if(other.checked){
+                    checkedElement.push(other.value);
+                }
+                if(checkedElement.length > 0){
+                    document.getElementById("pl").innerHTML = `You select this value ${checkedElement} `
+                }else{
+                    document.getElementById("pl").innerHTML = `You select Nothing.`
+                }
+            }
+        </script>
         <link rel="stylesheet" type="text/css" href="login-signup-css.css">    
     </head>    
     <body>    
-        <h2>Login Page</h2><br>    
-            <div class="login">    
-                <form id="login" method="get" action="">    
-                    <label><b>User Name     
+        <h2>Persional Information Form</h2><br>    
+            <div class="form" name="fm">    
+                <form id="form" method="get" action="" name="frm">    
+                    <label><b>Name     
                     </b>    
                     </label>    
-                    <input type="text" name="Uname" id="Uname" placeholder="Username">    
-                    <br><br>    
+                    <input type="text" name="Uname" id="Uname" placeholder="Username" onkeyup="upp()" onfocus="myFocusFunction()" onblur="myBlurFunction()" required>    
+                    <br><br>   
+                    <label><b>Mobile Number
+                    </b>
+                    </label><br>
+                    <input type="number" name="phno" id="phno"  maxlength="10" minlength="10" placeholder="Mobile Number" onblur="phoneValidation()" onfocus="myFocusFunction()" onblur="myBlurFunction()" required>
+                    <span id = "ph" style="color: red;"></span>
+                    <br><br>
+                    <label><b>E-mail
+                    </b>
+                    </label><br>
+                    <input type="email" name="email" id="email" placeholder="E-mail id" onblur="emailValidation()" required>
+                    <span id = "em" style="color: red;"></span>
+                    <br><br>
+                    <label><b>Date of Birth
+                    </b>
+                    </label><br>
+                    <input type="date" name="dob" id="dob" onblur="dobValidation()" required>
+                    <span id = "db" style="color: red;"></span>
+                    <br><br>
+                    <label><b>Address
+                    </b>
+                    </label><br>
+                    <textarea name="address" id="address" placeholder="Residential Address"></textarea>
+                    <br><br>
+                    <label><b>Hobbies
+                    </b>
+                    <br>
+                    </label>
+                    <input type="checkbox" id="h1" name="Watching Movies"  onclick="printHobbies()" value="Watching Movies">
+                    <label for="h1">Watching Movies</label><br>
+                    <input type="checkbox" id="h2" name="Playing outdoor games" onclick="printHobbies()" value="Playing outdoor games">
+                    <label for="h2">Playing Outdoor Games</label><br>
+                    <input type="checkbox" id="h3" name="Listening Music" onclick="printHobbies()"  value="Listening Music">
+                    <label for="h3">Listening Music</label><br>
+                    <input type="checkbox" id="h4" name="Other" onclick="printHobbies()" value="Other">
+                    <label for="h4">Other</label><br>
+                    <span id = "hb" style="color: red;"></span>
+                    <br><br>
+                    <label><b>Language
+                    </b><br>
+                    </label>
+                    <input type="checkbox" id="l1" name="language" onclick="printLanguages()" value="Gujarati">
+                    <label for="l1">Gujarati</label><br>
+                    <input type="checkbox" id="l2" name="language" onclick="printLanguages()" value="Hindi">
+                    <label for="l2">Hindi</label><br>
+                    <input type="checkbox" id="l3" name="language" onclick="printLanguages()" value="English">
+                    <label for="l3">English</label><br>
+                    <input type="checkbox" id="l4" name="language" onclick="printLanguages()" value="Other">
+                    <label for="l4">Other</label><br>
+                    <span id = "ln" style="color: red;"></span>
+                    <br><br>
+                    <label><b>Gender
+                    </b><br>
+                    </label>
+                    <input type="radio" name="gender" value="male" checked> Male<br>
+                    <input type="radio" name="gender" value="female"> Female<br><br>
+                    <span id = "db" style="color: red;"></span>
+                    <label><b>Programming Language
+                    </b><br>
+                    </label>
+                    <input type="checkbox" id="pl1" name="python" onclick="printProgrammingLanguages()" value="Python">
+                    <label for="pl1">Python</label><br>
+                    <input type="checkbox" id="pl1" name="javascript" onclick="printProgrammingLanguages()" value="javascript">
+                    <label for="pl2">javascript</label><br>
+                    <input type="checkbox" id="pl1" name="html" onclick="printProgrammingLanguages()" value="Html/Css">
+                    <label for="pl3">Html/Css</label><br>
+                    <input type="checkbox" id="pl1" name="java" onclick="printProgrammingLanguages()" value="Java">
+                    <label for="pl3">Java</label><br>
+                    <input type="checkbox" id="pl1" name="other" onclick="printProgrammingLanguages()" value="Other">
+                    <label for="pl4">Other</label><br>
+                    <span id = "pl" style="color: red;"></span>
+                    <br><br>
                     <label><b>Password     
                     </b>    
                     </label>    
-                    <input type="Password" name="Pass" id="Pass" placeholder="Password">    
+                    <input type="Password" name="Pass" id="pass" placeholder="Password" onkeydown="passwordValidation()">   
+                    <span id = "ps"></span> 
                     <br><br>    
-                    <input type="button" name="log" id="log" value="Log In Here">       
-                    <br><br>    
-                    <input type="checkbox" id="check">    
-                    <span>Remember me</span>    
-                    <br><br>  
-                    <a href="signup.html"><h3>Signup</h3></a>
-                    <a href="#"><h3> Forgot Password</h3></a>    
+                    <input type="button" name="submit" id="submit" value="Submit">       
+                    <br><br>     
                 </form>  
         </div>    
     </body>    

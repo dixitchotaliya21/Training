@@ -1,0 +1,40 @@
+<html>
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.5.2/flatly/bootstrap.min.css">
+  <link rel="stylesheet" href="timepicker.css">
+  <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+  <script src="timepicker.js"></script>
+  <script>
+    $(function () {
+      $('.bs-timepicker').timepicker();
+    });
+  </script>
+  <style>
+    .timepicker {
+      position: absolute;
+      z-index: 1000;
+      float: left;
+      width: 160px;
+      padding-bottom: 5px;
+      margin: 2px 0 0 0;
+      list-style: none;
+      font-size: 14px;
+      text-align: center;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      border-radius: 4px;
+      -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+      background-clip: padding-box;
+    }
+  </style>
+</head>
+
+<body>
+  <input type="text" class="bs-timepicker" />
+</body>
+
+</html>

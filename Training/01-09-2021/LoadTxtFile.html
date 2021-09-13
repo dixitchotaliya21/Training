@@ -1,0 +1,24 @@
+<html>
+
+<body>
+    <button id="loadTextFile">click</button>
+    <div id="textData"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#loadTextFile").click(function () {
+                $.ajax({
+                    url: "d.txt",
+                    success: function (result, status, xhr) {
+                        $("#textData").html(result);
+                    },
+                    error: function () {
+                        alert("file not found")
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

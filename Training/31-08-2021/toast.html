@@ -1,0 +1,67 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.3.1/materia/bootstrap.min.css">
+  <link href="toast.css" rel="stylesheet">
+  <style>
+    .container {
+      margin: 50px auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container text-center">
+
+    <button id="info" class="btn btn-info">Info Toast</button>
+    <button id="success" class="btn btn-success">Success Toast</button>
+    <button id="warning" class="btn btn-warning">Warning Toast</button>
+    <button id="error" class="btn btn-danger">Error Toast</button>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="toast.js"></script>
+  <script>
+    $('#info').on('click', function () {
+      $.toast({
+        title: 'Toast',
+        subtitle: '11 mins ago',
+        content: 'Hello, world! This is an INFO toast message.',
+        type: 'info',
+        delay: 5000
+      });
+    })
+
+    $('#success').on('click', function () {
+      $.toast({
+        title: 'Success',
+        subtitle: '11 mins ago',
+        content: 'Hello, world! This is a SUCCESS toast message.',
+        type: 'success',
+        delay: 5000
+      });
+    })
+
+    $('#warning').on('click', function () {
+      $.toast({
+        title: 'Warning',
+        subtitle: '11 mins ago',
+        content: 'Hello, world! This is a WARNING toast message.',
+        type: 'warning',
+        delay: 5000
+      });
+    })
+
+    $('#error').on('click', function () {
+      $.toast({
+        title: 'Error',
+        subtitle: '11 mins ago',
+        content: 'Hello, world! This is an ERROR toast message.',
+        type: 'error',
+        delay: 5000
+      });
+    })
+  </script>
+
+</html>

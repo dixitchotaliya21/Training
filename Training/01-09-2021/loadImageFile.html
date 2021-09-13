@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script>
+      function loadImg(){
+        $.ajax({
+        url: "path.txt",
+        success: function(result, status) {
+            var img = $('<img id="image_id">');
+            img.attr('src', result);
+            img.appendTo('#img'); 
+        } 
+});
+      }
+    </script>
+</head>
+
+<body>
+    <button id="loadImgFile" onclick="loadImg()">click</button>
+    <div id="img">
+  
+    </div>
+</body>
+
+</html>

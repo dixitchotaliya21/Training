@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ckeditor</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/29.1.0/classic/ckeditor.js"></script>
+	<style>
+        .ck-editor__editable_inline {
+                min-height: 400px;
+            }
+    </style>
+</head>
+<body>
+    <h1>Ck editor</h1>
+    <div id="editor" width="50px">
+        <p>This is WYS IS WYG.</p>
+    </div>
+    
+    <script>
+        ClassicEditor
+            .create( document.querySelector('#editor'));
+        
+            
+    </script>
+</body>
+</html>

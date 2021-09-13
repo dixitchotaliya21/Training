@@ -1,0 +1,42 @@
+<html>
+    <body>
+        <input type="todoinput" id="txt" >
+        <button id="click" onclick="addTodo()">Add items</button>
+        <span id="txt2"></span>
+        
+    
+    </body>
+    <script>
+        var item_list = new Array();
+        function addTodo(){
+            document.getElementById('txt2').innerHTML = "";
+            var item = document.getElementById("txt").value;
+            if(item == ""){
+                document.getElementById('txt2').innerHTML = "Please enter a value";
+            }else{
+                item_list.push(item);
+                localStorage.setItem("task",JSON.stringify(item_list));
+                document.getElementById('txt2').innerHTML = "Your task is added."
+            }
+            document.getElementById('txt').value = "";
+            display_item();
+        }
+        function display_item(){
+                var stored_task = localStorage.getItem("task");
+                var retrived_data = JSON.parse(stored_task);
+                for(var i = 0;i<retrived_data.length; i++){
+                    var span = document.createElement("span");
+                    span.textContent = retrived_data[i];
+                    document.body.appendChild(span);
+                    var btn2 = document.createElement("button");
+                    btn2.textContent = "Delete Items";
+                    document.body.appendChild(btn2);
+                    var btn3 = document.createElement("button");
+                    btn3.textContent = "Edit Items";
+                    document.body.appendChild(btn3);
+                }
+                localStorage.clear();
+                item_list.length = 0;
+        }
+    </script>
+</html>

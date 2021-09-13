@@ -1,0 +1,36 @@
+<html>
+
+<head>
+        <script type="text/javascript">
+                function loadXMLDoc() {
+                        var req = new XMLHttpRequest();
+                        req.onreadystatechange = function () {
+                                if (req.readyState == 4 && req.status == 200) {
+                                        document.getElementById("div1").innerHTML = req.responseText;
+                                }
+                        }
+                        req.open("GET", "Second.txt", true);
+                        req.send();
+                } 
+
+                function myFunction() {
+                        var xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function () {
+                                if (xhttp.readyState == 4 && xhttp.status == 200) {
+                                        document.getElementById("div2").innerHTML = xhttp.responseText;
+                                }
+                        };
+                        xhttp.open("GET", "first.txt", true);
+                        xhttp.send();
+                }
+        </script>
+</head>
+
+<body>
+        <div id="div1">first div</div>
+        <div id="div2">second div</div>
+        <input type="button" id="button1" value="click me!" onclick="loadXMLDoc()" />
+        <input type="button" id="button2" value="Ajax load!" onclick="myFunction()" />
+</body>
+
+</html>

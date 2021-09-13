@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "nodemailer": "^6.6.3"
+  },
+  "name": "09-09-2021",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

@@ -1,0 +1,17 @@
+[
+    {
+        "name":"Dixit",
+        "Salary":50000,
+        "Email" : "dixitchotaliya05@gamil.com"
+    },
+    {
+        "name":"Rutvik",
+        "Salary":5000,
+        "Email" : "rutvik@gamil.com"
+    },
+    {
+        "name":"Dhruv",
+        "Salary":500,
+        "Email" : "dhruv@gamil.com"
+    }
+]

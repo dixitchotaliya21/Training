@@ -2,25 +2,25 @@
     <script>
         class Calculator {
         constructor(value) {
-            this.value = value;
+            this.value=value;
         }
 
         divide(a) {
-            this.value = this.value / a;
+            this.value=this.value/a;
             return this;
         }
 
         add(b) {
-            this.value = this.value + b;
+            this.value=this.value+b;
             return this;
         }
 
         multiply(c) {
-            this.value = this.value * c;
+            this.value=this.value*c;
             return this;
         }
         sub(d) {
-            this.value = this.value - d;
+            this.value=this.value-d;
             return this;
         }
         toString(){
@@ -28,7 +28,6 @@
         }
 
     }
-
     var calc = new Calculator(10).add(5).multiply(2).divide(3).sub(2);
     alert(calc);
     </script>

@@ -1,0 +1,34 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                
+                $.ajax({
+                    url: "path2.txt",
+                    success: function (result, status, xhr) {
+                        $("#div1").html(result);
+                    },
+                    error: function (xhr, status, error) {
+                        alert("file not found")
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="div1">
+
+
+    </div>
+
+    <button>Get Images</button>
+
+</body>
+
+</html>

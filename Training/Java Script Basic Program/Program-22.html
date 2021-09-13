@@ -1,6 +1,6 @@
 <html>
     <body>
-        <h1>Make a simple calculator using switch case</h1>
+        <h1>22.Make a simple calculator using switch case</h1>
     </body>
     <script>
         /* Make a simple calculator using switch case*/
@@ -8,30 +8,27 @@
             var n1 = parseInt(prompt("Enter a number 1 :-"))
             var n2 = parseInt(prompt("Enter a number 2 :-"))
             var operator = parseInt(prompt("Enter an operator :-"))
-                switch(operator) {
-                    case 1:
-                        document.write("Sum = " + number1 + number2);
-                        break;
+            switch(operator) {
+                case 1:
+                    document.write("Sum = " + (n1 + n2));
+                    break;
 
-                    case 2:
-                        result = number1 - number2;
-                        document.write("Abstraction = " + result)
-                        break;
+                case '-':
+                    document.write("Abstraction = " + (n1-n2))
+                    break;
 
-                    case '*':
-                        result = number1 * number2;
-                        document.write("Multiplication = " + result)
-                        break;
+                case '*':
+                    document.write("Multiplication = " + (n1*n2))
+                    break;
 
-                    case '/':
-                        result = number1 / number2;
-                        cdocument.write("Division = " + result)
-                        break;
+                case '/':
+                    cdocument.write("Division = " + (n1/n2))
+                    break;
 
-                    default:
-                        document.write("Invalid Operator");
-                        break;
-                }
+                default:
+                    document.write("Invalid Operator");
+                    break;
+            }
  
         }
         calculator();
