@@ -1,7 +1,7 @@
 body {
   
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  /*background-image: url("../images/d.png");*/
+  background-image: url("../images/d.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
