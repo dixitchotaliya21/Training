@@ -15,8 +15,8 @@ router.post('/', function (req, res, next) {
     var e = a * b;
     var f = a / b;
     //res.send(c);
-    res.render('form_result', { mya: a, myb: b, myc: c  ,myd: d , mye: e , myf: f,})
-
+    var d = res.render('form_result', { mya: a, myb: b, myc: c  ,myd: d , mye: e , myf: f,})
+    res.render(d)
 
 });
 
